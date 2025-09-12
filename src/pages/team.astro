@@ -15,13 +15,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
         <div class="mt-8">
             <div
-                class="card bg-base-200 shadow-md mb-6 p-6 flex flex-row items-center justify-between"
+                class="card bg-base-200 shadow-md mb-6 p-6 flex flex-col md:flex-row items-center justify-between"
             >
-                <div class="flex-1">
-                    <div class="text-2xl font-semibold">
+                <div class="flex-1 w-full md:w-auto">
+                    <div class="text-2xl font-semibold inline-block px-2">
                         Diego Angulo Ramirez
                     </div>
-                    <div class="badge badge-primary mt-2 mb-2">
+                    <div
+                        class="badge badge-primary mt-2 mb-2 block px-2 whitespace-normal font-semibold"
+                    >
                         Director de la olimpiada
                     </div>
                     <div>
@@ -35,20 +37,25 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                     </div>
                 </div>
                 <div
-                    class="ml-6 w-24 h-24 bg-base-300 rounded-full flex items-center justify-center"
+                    class="mt-4 md:mt-0 md:ml-6 w-24 h-24 bg-base-300 rounded-full flex items-center justify-center"
                 >
-                    <!-- Foto de Diego aquí -->
-                    <span class="text-xs text-base-content">Foto</span>
+                    <img
+                        src="/team_photos/Diego.jpeg"
+                        alt="Foto de Diego Angulo Ramirez"
+                        class="w-24 h-24 object-cover rounded-full"
+                    />
                 </div>
             </div>
             <div
-                class="card bg-base-200 shadow-md mb-6 p-6 flex flex-row items-center justify-between"
+                class="card bg-base-200 shadow-md mb-6 p-6 flex flex-col md:flex-row items-center justify-between"
             >
-                <div class="flex-1">
-                    <div class="text-2xl font-semibold">
+                <div class="flex-1 w-full md:w-auto">
+                    <div class="text-2xl font-semibold inline-block px-2">
                         Rodolfo Catunta Uturunco
                     </div>
-                    <div class="badge badge-secondary mt-2 mb-2">
+                    <div
+                        class="badge badge-secondary mt-2 mb-2 block px-2 whitespace-normal font-semibold"
+                    >
                         Director del comité científico
                     </div>
                     <div>
@@ -61,10 +68,43 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                     </div>
                 </div>
                 <div
-                    class="ml-6 w-24 h-24 bg-base-300 rounded-full flex items-center justify-center"
+                    class="mt-4 md:mt-0 md:ml-6 w-24 h-24 bg-base-300 rounded-full flex items-center justify-center"
                 >
-                    <!-- Foto de Rodolfo aquí -->
-                    <span class="text-xs text-base-content">Foto</span>
+                    <img
+                        src="/team_photos/Rodo.jpeg"
+                        alt="Foto de Rodolfo Catunta Uturunco"
+                        class="w-24 h-24 object-cover rounded-full"
+                    />
+                </div>
+            </div>
+            <div
+                class="card bg-base-200 shadow-md mb-6 p-6 flex flex-col md:flex-row items-center justify-between"
+            >
+                <div class="flex-1 w-full md:w-auto">
+                    <div class="text-2xl font-semibold inline-block px-2">
+                        Rolando Troche Venegas
+                    </div>
+                    <div
+                        class="badge badge-accent mt-2 mb-2 block px-2 whitespace-normal font-semibold"
+                    >
+                        Director del Comite Tecnico
+                    </div>
+                    <div>
+                        Rolando es ex-competidor ICPC, actual organizador de
+                        concursos de programación en Bolivia. Actualmente forma
+                        parte del comité técnico de la International Olympiad in
+                        Informatics (IOI).<br /> Graduado de Informática en la Universidad
+                        Mayor de San Andrés (UMSA).
+                    </div>
+                </div>
+                <div
+                    class="mt-4 md:mt-0 md:ml-6 w-24 h-24 bg-base-300 rounded-full flex items-center justify-center"
+                >
+                    <img
+                        src="/team_photos/Rolo.png"
+                        alt="Foto de Rolando Troche Venegas"
+                        class="w-24 h-24 object-cover rounded-full"
+                    />
                 </div>
             </div>
         </div>
