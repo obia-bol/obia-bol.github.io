@@ -6,7 +6,7 @@ heroImage: "/call-for-mentors.png"
 tags: ["Mentores", "Aprendizaje", "Apoyo"]
 ---
 
-La Olimpiada Boliviana de Inteligencia Artificial (OBIA) está buscando mentores apasionados y dedicados para apoyar a nuestros participantes en su viaje de aprendizaje y desarrollo en el campo de la inteligencia artificial.
+<!-- La Olimpiada Boliviana de Inteligencia Artificial (OBIA) está buscando mentores apasionados y dedicados para apoyar a nuestros participantes en su viaje de aprendizaje y desarrollo en el campo de la inteligencia artificial.
 
 Como mentor, tendrás la oportunidad de guiar a los estudiantes, compartir tus conocimientos y experiencias, y ayudarles a superar desafíos técnicos y conceptuales. No es necesario ser un experto en inteligencia artificial; lo más importante es tener la disposición para aprender y apoyar a los jóvenes talentos.
 
@@ -45,4 +45,6 @@ Que aprenderás como mentor:
 - Habilidades de mentoría y apoyo a estudiantes de distintas edades y niveles de experiencia.
 
 Si estás interesado en ser mentor en la OBIA, por favor completa el formulario de inscripción [COMING SOON](https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ). <br />
-Nos pondremos en contacto contigo si es que cumples con los requisitos para continuar con el proceso de selección.
+Nos pondremos en contacto contigo si es que cumples con los requisitos para continuar con el proceso de selección. -->
+
+Coming soon - July 2026.
