@@ -1,0 +1,37 @@
+---
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import type { BlogSchema } from "../../content/config";
+import PostLayout from "../../layouts/PostLayout.astro";
+import createSlug from "../../lib/createSlug";
+
+export async function getStaticPaths() {
+  const topicEntries = (await getCollection("posts")).filter((entry) =>
+    /^\d{2}-/.test(entry.id),
+  );
+  return topicEntries.map((entry) => ({
+    params: { slug: createSlug(entry.data.title, entry.slug) },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<"posts">;
+}
+
+const { entry } = Astro.props;
+const topic: BlogSchema = entry.data;
+const { Content } = await entry.render();
+---
+
+<PostLayout
+  title={topic.title}
+  description={topic.description}
+  pubDate={topic.pubDate}
+  heroImage={topic.heroImage}
+  updatedDate={topic.updatedDate}
+  badge={topic.badge}
+  tags={topic.tags}
+>
+  <Content />
+</PostLayout>

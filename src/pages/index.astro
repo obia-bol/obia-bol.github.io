@@ -4,49 +4,48 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 import createSlug from "../lib/createSlug";
 
-const posts = (await getCollection("posts")).sort(
-    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
+const posts = (await getCollection("posts"))
+  .filter((post) => !/^\d{2}-/.test(post.id))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const last_posts = posts.slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
-    <div class="pb-12 mt-5">
-        <img
-            src="/full logo/full logo PNG.png"
-            alt="OBIA Logo"
-            class="w-80 ml-4 mb-4"
-        />
-        <div class="text-5xl font-bold">
-            Olimpiada Boliviana de Inteligencia Artificial
-        </div>
-        <br />
-        <div class="py-2">
-            <span class="text-lg">
-                La Olimpiada Boliviana de Inteligencia Artificial es una
-                iniciativa nacional que busca fomentar el aprendizaje, la
-                innovación y el desarrollo de habilidades en inteligencia
-                artificial entre estudiantes bolivianos. <br />La OBIA es una
-                iniciativa que busca no solo organizar competencias, sino
-                también aprender y compartir conocimientos en el campo de la
-                inteligencia artificial.
-            </span>
-        </div>
+  <div class="pb-12 mt-5">
+    <img
+      src="/full logo/full logo PNG.png"
+      alt="OBIA Logo"
+      class="w-80 ml-4 mb-4"
+    />
+    <div class="text-5xl font-bold">
+      Olimpiada Boliviana de Inteligencia Artificial
     </div>
-    {
-        last_posts.map((post) => (
-            <>
-                <HorizontalCard
-                    title={post.data.title}
-                    img={post.data.heroImage}
-                    desc={post.data.description}
-                    url={"/posts/" + createSlug(post.data.title, post.slug)}
-                    target="_self"
-                    badge={post.data.badge}
-                />
-                <div class="divider my-0" />
-            </>
-        ))
-    }
+    <br />
+    <div class="py-2">
+      <span class="text-lg">
+        La Olimpiada Boliviana de Inteligencia Artificial es una iniciativa
+        nacional que busca fomentar el aprendizaje, la innovación y el
+        desarrollo de habilidades en inteligencia artificial entre estudiantes
+        bolivianos. <br />La OBIA es una iniciativa que busca no solo organizar
+        competencias, sino también aprender y compartir conocimientos en el
+        campo de la inteligencia artificial.
+      </span>
+    </div>
+  </div>
+  {
+    last_posts.map((post) => (
+      <>
+        <HorizontalCard
+          title={post.data.title}
+          img={post.data.heroImage}
+          desc={post.data.description}
+          url={"/posts/" + createSlug(post.data.title, post.slug)}
+          target="_self"
+          badge={post.data.badge}
+        />
+        <div class="divider my-0" />
+      </>
+    ))
+  }
 </BaseLayout>

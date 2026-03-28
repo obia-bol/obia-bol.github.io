@@ -1,3 +1,25 @@
 .time-line-container>div:last-child .education__time>.education__line {
     display: none;
 }
+
+/* MathML styling for educational content without LaTeX dependencies */
+.prose .math-block {
+    margin: 1rem 0;
+    padding: 0.85rem 1rem;
+    border: 1px solid hsl(var(--bc) / 0.18);
+    border-radius: 0.75rem;
+    background: hsl(var(--b2) / 0.5);
+    overflow-x: auto;
+}
+
+.prose math,
+.prose .math-inline {
+    font-family: "Cambria Math", "STIX Two Math", "Times New Roman", serif;
+    font-size: 1.05em;
+}
+
+.prose .math-inline {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0.1rem;
+}
